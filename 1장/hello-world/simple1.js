@@ -8,4 +8,4 @@ function LikeButton() {
   );
 }
 const  domContainer = document.getElementsById('root');
-ReactDOM.render(React.createElement)
+ReactDOM.render(React.createElement(LikeButton), domContainer)
