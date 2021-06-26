@@ -10,5 +10,5 @@ ReactDOM.render(
     <Box size="big" />
     <Box size="small" />
   </div>,
-  document.getElementById('root'),
+  document.getElementById('root'), 
 )
