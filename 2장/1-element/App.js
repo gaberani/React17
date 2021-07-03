@@ -1,0 +1,31 @@
+import React, { useSate, useState } from 'react';
+
+export default function App() {
+  const [todoList, setTodoList] = useState([]);
+  function onAdd() {
+  }
+  function onDelete() {
+    const id = Number(e.target.dataset.id);
+    const newTodoList = todoList.filter(todo => todo.id !== id);
+    setTodoList(newTodoList);
+  }
+  function onSaveToServer() {}
+  return (
+    <div>
+      <h3>할 일 목록</h3>
+      <ul>
+        {todoList.map(todo => (
+          <li key={todo.id}>
+            <span>{todo.desc}</span>
+            <button data-id={todo.id} onClick={onClick}>
+              삭제
+            </button>
+          </li>
+        ))}
+      </ul>
+      <input type="text" value={''} onChange={e => {}} />
+      <button onClick={onAdd}>추가</button>
+      <button onClick={onSaveToServer}>서버에 저장</button>
+    </div>
+  )
+}
