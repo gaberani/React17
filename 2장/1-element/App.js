@@ -2,7 +2,12 @@ import React, { useSate, useState } from 'react';
 
 export default function App() {
   const [todoList, setTodoList] = useState([]);
+  const [currentId, setCurrentId] = useState(1);
+  const [desc, setDesc] = useState('');
   function onAdd() {
+    const todo = { id: currentId, desc };
+    setCurrentId(currentId + 1);
+    setTodoList([...todoList, todo]);
   }
   function onDelete() {
     const id = Number(e.target.dataset.id);
