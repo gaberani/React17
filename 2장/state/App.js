@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import Counter from './Counter';
 
 let color = 'red';
 export default function App() {
   const [color, setColor] = useState('red');
   function onClick() {
-    color = 'blue';
+    setColor('blue');
   }
   return (
-    <button style={{ backgroundColor: color }} onClick={onClick}>
-      좋아요
-    </button>
+    <div>
+      <Counter />
+      <button style={{ backgroundColor: color }} onClick={onClick}>
+        좋아요
+      </button>
+    </div>
   )
 }
