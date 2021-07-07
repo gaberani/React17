@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Counter from './Counter';
 
 export default function App() {
@@ -6,6 +7,13 @@ export default function App() {
     <React.Fragment>
       <p>안녕</p>
       <p>하세요</p>
+      {ReactDOM.createPortal(
+        <div>
+          <p>안녕하세요</p>
+          <p>실전 리액트 프로그래밍 입니다.</p>
+        </div>,
+        document.getElementById('something'),
+      )}
       {/* null이나 boolean 값은 렌더링 되지 않는다! */}
       {null}
       {false}
