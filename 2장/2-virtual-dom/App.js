@@ -11,7 +11,7 @@ export default function App() {
   });
   return (
     <div>
-      <h1>안녕하새요</h1>
+      <h1 style={{ color: seconds % 2 ? 'red' : 'blue' }}>안녕하새요</h1>
       <h2>지금까지 {seconds}초가 지났습니다.</h2>
     </div>
   )
