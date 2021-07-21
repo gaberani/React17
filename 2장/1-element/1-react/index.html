@@ -10,6 +10,12 @@
     <script>
       let currentId = 1;
       const todoList = [];
+      function applyTodoData(data) {
+        // 수정, 삭제, 추가
+      }
+      function applyFriendData(data) {
+        // 수정, 삭제, 추가
+      }
       function onAdd() {
         const descEl = document.querySelector('.todo .desc');
         const todo = { id: currentId++, desc: descEl.value };
@@ -40,7 +46,9 @@
           listEl.removeChild(todoEl);
         }
       } 
-      function onSaveToServer() {}
+      function onSaveToServer() {
+        // todoList를 서버로 전송한다
+      }
     </script>
   </body>
 </html>
