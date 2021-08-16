@@ -29,8 +29,7 @@ const Profile = React.memo(function() {
   );
 });
 
-function Greeting({ username }) {
-  <UserContext.Consumer>
-    {username => <p>{`${username}님 안녕하세요`}</p>};
-  </UserContext.Consumer>
+function Greeting() {
+  const username = useContext(UserContext);
+  return <p>{`${username}님 안녕하세요`}</p>;
 }
