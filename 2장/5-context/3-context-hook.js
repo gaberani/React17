@@ -21,7 +21,7 @@ export default function App() {
 }
 
 const Profile = React.memo(function() {
-  console.log(Profile)
+  console.log('Profile render')
   return (
     <div>
       <Greeting />
