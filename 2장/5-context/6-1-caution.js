@@ -1,4 +1,3 @@
-
 import React, { useContext, createContext, useState } from 'react';
 
 const UserContext = createContext({ username: 'unknown', age: 0 });
