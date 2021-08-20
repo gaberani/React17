@@ -8,8 +8,8 @@ export default function App() {
 
   return (
     <div>
-      <InputAndSave ref={inputRef} />
-      <button>저장</button>
+      <InputAndSave inputRef={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>텍스트로 이동</button>
     </div>
   );
 }
