@@ -11,6 +11,21 @@ export default function App() {
   // useRef에서 초기값을 할당하여 사용할 수 있다.
   // const boxListRef = useRef(123);
   const boxListRef = useRef({} );
+  function onClick() {
+    let maxRight = 0;
+    let maxId = '';
+    for(const box of BOX_LIST) {
+      const ref = boxListRef.current[box.id];
+      if (ref) {
+        const rect = ref.getBoundingClientRect();
+        if(maxRight < rect.right) {
+          maxRight = rect.right;
+          maxId = box.id;
+        }
+      }
+    }
+    alert(`오른쪽 끝 요소는 ${maxId} 입니다`)
+  }
 
   return (
     <div>
