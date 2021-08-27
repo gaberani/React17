@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 export default function App() {
   const [name, setName] = useState('');
   const [age, setAge] = useState(0);
   const [v1, setV1] = useState(0);
+  // 맨 뒤 배열은 의존성 배열임
+  const onSave = useCallback(() => saveToServer(name, age), [name, age]);
   return (
     <div>
       <p>{`name is ${name}`}</p>
       <p>{`age is ${age}`}</p>
       <UserEdit
-        onSave={() => saveToServer({name, age})}
+        onSave={onSave}
         setName={setName}
         setAge={setAge}
       />
