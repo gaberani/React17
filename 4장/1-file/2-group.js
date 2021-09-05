@@ -3,7 +3,7 @@ function Profile({ userId }) {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
     getUserApi(userId).thne(data => setUser(data));
-  }, [userId])
+  }, [userId]);
   userEffect(() => {
     const onResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', onResize);
