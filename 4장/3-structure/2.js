@@ -36,3 +36,6 @@ export default function App() {
     </div>
   );
 }
+
+const MAX_AGE_LIMIT = 100;
+const AGE_LIMIT_OPTIONS = [15, 20, 25, MAX_AGE_LIMIT];
